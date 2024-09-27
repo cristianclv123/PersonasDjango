@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Actualizar Persona{% endblock %}
+
+{% block content %}
+    <h1>Actualizar Información de la Persona</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div style="display: flex; align-items: center;">
+            <button type="submit" style="background-color: gray; color: white; border: none; padding: 10px 15px; cursor: pointer; margin-right: 10px;">
+                Actualizar
+            </button>
+            <form action="{% url 'persona_delete' persona.pk %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" style="background-color: darkgray; color: white; border: none; padding: 10px 15px; cursor: pointer;">
+                    Eliminar Registro
+                </button>
+            </form>
+        </div>
+    </form>
+{% endblock %}
+

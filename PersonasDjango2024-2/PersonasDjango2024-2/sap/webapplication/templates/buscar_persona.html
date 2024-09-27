@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Buscar Persona{% endblock %}
+
+{% block content %}
+    <h1>Buscar Persona por ID</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_persona">ID de la Persona:</label>
+        <input type="text" id="id_persona" name="id_persona" required>
+        <button type="submit">Buscar</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+{% endblock %}

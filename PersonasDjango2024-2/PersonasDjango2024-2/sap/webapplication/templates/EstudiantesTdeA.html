@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+</head>
+<body>
+
+
+
+  <header>
+        <h1>Welcome to the Student Page</h1>
+        <nav>
+            <ul>
+                <li><a href="/bienvenidohtml">Home</a></li>
+                <li><a href="/contactohtml">Contacto</a></li>
+                <li><a href="/despedirsehtml">Despedida</a></li>
+                <li><a href="/persona_register">Registro</a></li>
+                <li><a href="/buscar_persona">Actualizar</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About the Student Page</h2>
+            <p>TdeA 2024-2 friday morning</p>
+        </section>
+
+        <section>
+
+<h1><a href="/">Bienvenido estudiantes TdeA al sistema de administración de personas</a></h1>
+<h4>Titulo 2 estilo 4 </h4>
+            <div>{{msj1}}</div>
+            <div>{{variable}}</div>
+
+
+
+ <table class="personas-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for persona in personas %}
+            <tr>
+                <td>{{ persona.id }}</td>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellido }}</td>
+                <td>{{ persona.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</section>
+</h1>
+</main>
+
+ <footer>
+        <p>&copy; 2024 Student Page TdeA</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+</body>
+</html>

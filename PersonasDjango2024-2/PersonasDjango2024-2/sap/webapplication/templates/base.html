@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student Page{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Students Internal Page</h1>
+        <nav>
+            <ul>
+                <li><a href="/bienvenidohtml">Home</a></li>
+                <li><a href="/contactohtml">Contacto</a></li>
+                <li><a href="/despedirsehtml">Despedida</a></li>
+                <li><a href="/persona_register">Registro</a></li>
+                <li><a href="/buscar_persona">Actualizar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Content specific to each page will be inserted here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Student Page TdeA</p>
+    </footer>
+</body>
+</html>
